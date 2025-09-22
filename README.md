@@ -91,7 +91,7 @@ Project structure overview
 	- `src/components/` — core components (Chatbot, ChatMessage, PersonaSelector, QuickReplies, ErrorHandoff)
 	- `ASSIGNMENT_DOCUMENTATION.md` — requirements mapping and design notes
 
-- `landing-page/` — presentation site and assignment docs
+- `landing-page/` — pr	esentation site and assignment docs
 	- `code/docs/` — concept notes, flows, personas, and wireframes
 	- `src/assets/` — hero and other images used in the site
 
