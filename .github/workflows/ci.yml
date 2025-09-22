@@ -21,7 +21,12 @@ jobs:
           node-version: '18'
       - name: Install dependencies (chatbot)
         working-directory: ./chatbot
-        run: npm ci
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
       - name: Run lint (chatbot)
         working-directory: ./chatbot
         run: npm run lint --if-present
@@ -43,7 +48,12 @@ jobs:
           node-version: '18'
       - name: Install dependencies (landing-page)
         working-directory: ./landing-page
-        run: npm ci
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
       - name: Run lint (landing-page)
         working-directory: ./landing-page
         run: npm run lint --if-present
