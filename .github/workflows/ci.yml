@@ -1,0 +1,52 @@
+name: CI — Lint & Build
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  chatbot:
+    name: Chatbot — install, lint, build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install dependencies (chatbot)
+        working-directory: ./chatbot
+        run: npm ci
+      - name: Run lint (chatbot)
+        working-directory: ./chatbot
+        run: npm run lint --if-present
+      - name: Build (chatbot)
+        working-directory: ./chatbot
+        run: npm run build
+
+  landing-page:
+    name: Landing Page — install, lint, build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install dependencies (landing-page)
+        working-directory: ./landing-page
+        run: npm ci
+      - name: Run lint (landing-page)
+        working-directory: ./landing-page
+        run: npm run lint --if-present
+      - name: Build (landing-page)
+        working-directory: ./landing-page
+        run: npm run build
