@@ -1,5 +1,7 @@
 # ServiceHive — UI/UX Design Internship
 
+![ServiceHive logo header](public/assets/servicehive-header.png)
+
 Professional, portfolio-ready front-end deliverables from the ServiceHive UI/UX Design internship. This repository showcases two related projects:
 
 - `chatbot/` — a high-fidelity AI service chatbot UI built with React + TypeScript (assignment work). Implements persona-driven conversation flows, human-handoff, accessibility features, and polished micro-interactions.
