@@ -1,6 +1,6 @@
 # ServiceHive — UI/UX Design Internship
 
-![ServiceHive logo header](public/assets/servicehive-header.png)
+![ServiceHive logo header](https://raw.githubusercontent.com/Kaandizz/ServiceHive-UI-UX-Design-internship/main/public/assets/servicehive-header.png)
 
 Professional, portfolio-ready front-end deliverables from the ServiceHive UI/UX Design internship. This repository showcases two related projects:
 
